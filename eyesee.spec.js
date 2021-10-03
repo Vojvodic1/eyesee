@@ -36,6 +36,28 @@ describe('Eyesee Cypress Test', () =>{
         cy.get('#login-submit > .css-19r5em7')
         .click()
     })
+
+    it('Sign up',() =>{
+        cy.visit('https://trello.com/en/login')
+        cy.get('.signupLink')
+        .click()
+
+        cy.get('#email')
+        .click()
+        .type('random@email123456789565.com')
+
+        cy.get('#signup-submit')
+        .click()
+
+        cy.get('#displayName')
+        .click()
+        .type('RandomName')
+
+        cy.get('#signup-submit > .css-19r5em7')
+        .click()
+
+        //don't know how to select correct images
+    })
         
     // Cypress detected a cross origin error happened on page load:
 
